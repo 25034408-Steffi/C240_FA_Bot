@@ -1,14 +1,12 @@
 (function () {
-  var script = document.createElement('script');
-  script.src = 'https://cdn.botpress.cloud/webchat/v2/inject.js';
-  script.async = true;
-  script.onload = function () {
-    window.botpressWebChat.init({
-      botId: 'YOUR_BOT_ID',
-      hostUrl: 'https://cdn.botpress.cloud/webchat/v2',
-      messagingUrl: 'https://messaging.botpress.cloud',
-      clientId: 'YOUR_CLIENT_ID',
+  const tryNowBtn = document.getElementById('try-now-btn');
+
+  if (tryNowBtn) {
+    tryNowBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.botpress) {
+        window.botpress.open();
+      }
     });
-  };
-  document.head.appendChild(script);
+  }
 })();

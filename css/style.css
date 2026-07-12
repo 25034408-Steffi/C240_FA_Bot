@@ -89,14 +89,14 @@ img {
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
 
-.logo:hover {
-  color: var(--color-accent);
+.logo__img {
+  display: block;
+  height: 36px;
+  width: auto;
 }
 
 .nav-toggle {
@@ -333,6 +333,27 @@ img {
   opacity: 0.9;
   max-width: 520px;
   margin: 0 auto;
+}
+
+.contact-details {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.05rem;
+  color: var(--color-text);
+  justify-content: center;
+}
+
+.contact-item__icon {
+  font-size: 1.5rem;
 }
 
 .features-grid {
